@@ -1,0 +1,169 @@
+/* ========== BASE RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Futura Round', Arial, sans-serif;
+  background-color: #FFFFFF;
+  color: #000000;
+  line-height: 1.6;
+}
+
+/* ========== COLORS ========== */
+:root {
+  --primary: #1E10C7;
+  --secondary: #ED4E00;
+  --accent1: #FFFFFF;
+  --accent2: #000000;
+}
+
+/* ========== HEADER ========== */
+.site-header {
+  background-color: var(--primary);
+  color: var(--accent1);
+  padding: 1rem 0;
+}
+.site-header .brand {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+.main-nav a {
+  color: var(--accent1);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 500;
+}
+.main-nav a:hover {
+  color: var(--secondary);
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  color: var(--accent1);
+  padding: 3rem 1rem;
+  border-radius: 12px;
+}
+.hero h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.hero .lead {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.hero .btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.btn.primary {
+  background-color: var(--secondary);
+  color: var(--accent1);
+}
+.btn.primary:hover {
+  background-color: #c43f00;
+}
+.btn.secondary {
+  background-color: var(--accent1);
+  color: var(--primary);
+}
+.btn.secondary:hover {
+  background-color: #f1f1f1;
+}
+
+/* ========== FEATURES SECTION ========== */
+.features {
+  margin: 3rem 0;
+}
+.features h3 {
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.features ul {
+  list-style-type: none;
+}
+.features li {
+  margin: 0.5rem 0;
+  padding-left: 1rem;
+  position: relative;
+}
+.features li::before {
+  content: "⚡";
+  color: var(--secondary);
+  position: absolute;
+  left: 0;
+}
+
+/* ========== CONTACT SECTION ========== */
+.contact-snippet h3 {
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+}
+
+/* ========== FOOTER ========== */
+.site-footer {
+  background-color: var(--accent2);
+  color: var(--accent1);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+}
+
+/* ========== FLOATING ACTION BUTTONS ========== */
+.fab-group {
+  position: fixed;
+  right: 15px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.fab {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.fab.call {
+  background-color: var(--primary);
+}
+.fab.whatsapp {
+  background-color: #25D366;
+}
+.fab.email {
+  background-color: var(--secondary);
+}
+.fab svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .main-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-nav a {
+    margin: 0.5rem 0;
+  }
+}
